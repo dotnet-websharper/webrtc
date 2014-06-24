@@ -1,0 +1,6 @@
+syntax: glob
+WebRTC/bin/*
+WebRTC/obj/*
+packages/*
+*.suo
+build/*
