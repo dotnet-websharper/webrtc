@@ -82,13 +82,16 @@ module Definition =
         ]
         |+> Protocol [
             "track" =? MediaStreamTrack
+            |> WithComment "The MediaStreamTrack associated with this event."
         ]
 
     let MediaStreamError = 
         Class "MediaStreamError"
         |+> Protocol [
             "name" =? T<string>
+            |> WithComment "The name of the error."
             "message" =? T<string>
+            |> WithComment "A UA-dependent string offering extra human-readable information about the error."
             "constraintName" =? T<string>
         ]
 
@@ -105,6 +108,7 @@ module Definition =
         ]
         |+> Protocol [
             "error" =? MediaStreamError
+            |> WithComment "The error associated with this event."
         ]
 
     let MediaDeviceKind =
@@ -134,6 +138,7 @@ module Definition =
         |+> Protocol [
             "ondevicechange" =@ Event ^-> O
             "enumerateDevices" => (Type.ArrayOf MediaDeviceInfo ^-> O)?resultCallback ^-> O
+            |> WithComment "Collects information about the user agents available media input and output devices."
         ]
 
     let MediaStreamConstraints =
@@ -162,6 +167,7 @@ module Definition =
         |+> Protocol [
             "getUserMedia" => (MediaStreamConstraints?constraints * (MediaStream ^-> O)?successCallback * (MediaStreamError ^-> O)?errorCallback) ^-> O
             |> WithInline "navigator.getUserMedia($constraints, $successCallback, $errorCallback)"
+            |> WithComment "Gets the MediaStream track specified by the constraints."
         ]
         
 
@@ -171,13 +177,16 @@ module Definition =
         |=> Inherits T<IntelliFactory.WebSharper.Dom.EventTarget>
         |+> Protocol [
             "kind" =? T<string>
+            |> WithComment "Returns audio or video accoring to the contained medium."
             "id" =? T<string>
+            |> WithComment "Globally unique identifier."
             "label" =? T<string>
             "enabled" =@ T<bool>
             "muted" =? T<bool>
 
             "_readonly" =? T<bool>
             "remote" =? T<bool>
+            |> WithComment "Shows whether the object is sourced by RTCPeerConnection."
             "readyState" =? MediaStreamTrackState
 
             "onmute" =@ Event ^-> O
@@ -186,12 +195,17 @@ module Definition =
             "onended" =@ Event ^-> O
 
             "getNativeSettings" => O ^-> T<obj> 
+            |> WithComment "Returns the native settings of all the properties of the object."
             "clone" => O ^-> MediaStreamTrack
+            |> WithComment "Clones the given MediaStreamTrack."
             "stop" => O ^-> O
+            |> WithComment "Detaches the tracks's source."
             "getCapabilities" => O ^-> T<obj>
+            |> WithComment "See ConstrainablePattern Interface for the definition of this method."
             "getConstraints" => O ^-> MediaTrackContraints
             "getSettings" => O ^-> T<obj>
             "applyConstraints" => (MediaTrackContraints?constraints * (O ^-> O)?successCallback * (MediaStreamError ^-> O)?errorCallback) ^-> O
+            |> WithComment "Applies a set of constraints to the track."
         ]
 
     let MediaStreamClass = 
@@ -201,16 +215,27 @@ module Definition =
         |+> [
             Constructor O
             Constructor MediaStream
+            |> WithComment "Composes a new stream out of existing tracks."
             Constructor (Type.ArrayOf MediaStream)
+            |> WithComment "Composes a new stream out of existing tracks."
         ]
         |+> Protocol [
             "id" =? T<string>
+            |> WithComment "Globally unqiue identifier."
             "getAudioTracks" => O ^-> Type.ArrayOf MediaStreamTrack
+            |> WithComment "Returns a sequence of MediaStreamTrack objects representing the audio tracks in this stream."
             "getVideoTracks" => O ^-> Type.ArrayOf MediaStreamTrack
+            |> WithComment "Returns a sequence of MediaStreamTrack objects representing the video tracks in this stream."
+            "getTracks" => O ^-> Type.ArrayOf MediaStreamTrack
+            |> WithComment "Returns a sequence of MediaStreamTrack objects representing all the tracks in this stream."
             "getTrackById" => T<string>?trackId ^-> MediaStreamTrack
+            |> WithComment "Returns the first MediaStreamTrack whose id is equal to trackId from this MediaStream's tracklist."
             "addTrack" => MediaStreamTrack?track ^-> O
+            |> WithComment "Adds the given MediaStreamTrack to this MediaStream."
             "removeTrack" => MediaStreamTrack ^-> O
+            |> WithComment "Removes the given MediaStreamTrack from this MediaStream."
             "clone" => O ^-> MediaStream
+            |> WithComment "Clones the given MediaStream and all its tracks."
 
             "active" =? T<bool>
             "onactive" =@ Event ^-> O
