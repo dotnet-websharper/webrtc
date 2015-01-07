@@ -3,11 +3,10 @@ namespace WebRTC
 open IntelliFactory.WebSharper.InterfaceGenerator
 
 module Definition =
-    open IntelliFactory.WebSharper.Html5
-    open IntelliFactory.WebSharper.EcmaScript
+    open IntelliFactory.WebSharper
 
     let O = T<unit>
-    let Event = T<IntelliFactory.WebSharper.Dom.Event>
+    let Event = T<IntelliFactory.WebSharper.JavaScript.Dom.Event>
 
     let MediaStreamTrack = Type.New ()
 
@@ -131,7 +130,7 @@ module Definition =
 
     let MediaDevices =
         Class "MediaDevices"
-        |=> Inherits T<IntelliFactory.WebSharper.Dom.EventTarget>
+        |=> Inherits T<IntelliFactory.WebSharper.JavaScript.Dom.EventTarget>
         |+> [
             "getSupportedConstraints" => T<string>?kind ^-> T<obj>
         ]
@@ -174,7 +173,7 @@ module Definition =
     let MediaStreamTrackClass = 
         Class "MediaStreamTrack"
         |=> MediaStreamTrack
-        |=> Inherits T<IntelliFactory.WebSharper.Dom.EventTarget>
+        |=> Inherits T<IntelliFactory.WebSharper.JavaScript.Dom.EventTarget>
         |+> Protocol [
             "kind" =? T<string>
             |> WithComment "Returns audio or video accoring to the contained medium."
@@ -211,7 +210,7 @@ module Definition =
     let MediaStreamClass = 
         Class "MediaStream"
         |=> MediaStream
-        |=> Inherits T<IntelliFactory.WebSharper.Dom.EventTarget>
+        |=> Inherits T<IntelliFactory.WebSharper.JavaScript.Dom.EventTarget>
         |+> [
             Constructor O
             Constructor MediaStream
