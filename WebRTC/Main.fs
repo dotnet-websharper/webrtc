@@ -245,7 +245,7 @@ module Definition =
 
     let Assembly = 
         Assembly [
-            Namespace "IntelliFactory.WebSharper.JavaScript" [
+            Namespace "WebSharper.JavaScript" [
                 MediaStreamTrackState
                 SourceTypeEnum
                 Constraints.DoubleRange
