@@ -1,12 +1,12 @@
 namespace WebRTC
 
-open IntelliFactory.WebSharper.InterfaceGenerator
+open WebSharper.InterfaceGenerator
 
 module Definition =
-    open IntelliFactory.WebSharper
+    open WebSharper
 
     let O = T<unit>
-    let Event = T<IntelliFactory.WebSharper.JavaScript.Dom.Event>
+    let Event = T<WebSharper.JavaScript.Dom.Event>
 
     let MediaStreamTrack = Type.New ()
 
@@ -76,17 +76,17 @@ module Definition =
 
     let MediaStreamTrackEvent =
         Class "MediaStreamTrackEvent"
-        |+> [
+        |+> Static [
             Constructor (T<string>?``type`` * MediaStreamTrackEventInit?eventInitDict)
         ]
-        |+> Protocol [
+        |+> Instance [
             "track" =? MediaStreamTrack
             |> WithComment "The MediaStreamTrack associated with this event."
         ]
 
     let MediaStreamError = 
         Class "MediaStreamError"
-        |+> Protocol [
+        |+> Instance [
             "name" =? T<string>
             |> WithComment "The name of the error."
             "message" =? T<string>
@@ -102,10 +102,10 @@ module Definition =
 
     let MediaStreamErrorEvent =
         Class "MediaStreamErrorEvent"
-        |+> [
+        |+> Static [
             Constructor (T<string>?``type`` * MediaStreamErrorEventInit?eventInitDict)
         ]
-        |+> Protocol [
+        |+> Instance [
             "error" =? MediaStreamError
             |> WithComment "The error associated with this event."
         ]
@@ -130,11 +130,11 @@ module Definition =
 
     let MediaDevices =
         Class "MediaDevices"
-        |=> Inherits T<IntelliFactory.WebSharper.JavaScript.Dom.EventTarget>
-        |+> [
+        |=> Inherits T<WebSharper.JavaScript.Dom.EventTarget>
+        |+> Static [
             "getSupportedConstraints" => T<string>?kind ^-> T<obj>
         ]
-        |+> Protocol [
+        |+> Instance [
             "ondevicechange" =@ Event ^-> O
             "enumerateDevices" => (Type.ArrayOf MediaDeviceInfo ^-> O)?resultCallback ^-> O
             |> WithComment "Collects information about the user agents available media input and output devices."
@@ -156,14 +156,14 @@ module Definition =
 
     let UserMedia =
         Class "UserMedia"
-        |+> [
+        |+> Static [
             Constructor O
             |> WithInline "navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia"
             ///Not supported
             //"getMediaDevices" => ((Type.ArrayOf MediaDeviceInfo) ^-> O)?resultCallback ^-> O
             //|> WithInline "navigator.getMediaDevices($resultCallback)$"
         ]
-        |+> Protocol [
+        |+> Instance [
             "getUserMedia" => (MediaStreamConstraints?constraints * (MediaStream ^-> O)?successCallback * (MediaStreamError ^-> O)?errorCallback) ^-> O
             |> WithInline "navigator.getUserMedia($constraints, $successCallback, $errorCallback)"
             |> WithComment "Gets the MediaStream track specified by the constraints."
@@ -173,8 +173,8 @@ module Definition =
     let MediaStreamTrackClass = 
         Class "MediaStreamTrack"
         |=> MediaStreamTrack
-        |=> Inherits T<IntelliFactory.WebSharper.JavaScript.Dom.EventTarget>
-        |+> Protocol [
+        |=> Inherits T<WebSharper.JavaScript.Dom.EventTarget>
+        |+> Instance [
             "kind" =? T<string>
             |> WithComment "Returns audio or video accoring to the contained medium."
             "id" =? T<string>
@@ -210,15 +210,15 @@ module Definition =
     let MediaStreamClass = 
         Class "MediaStream"
         |=> MediaStream
-        |=> Inherits T<IntelliFactory.WebSharper.JavaScript.Dom.EventTarget>
-        |+> [
+        |=> Inherits T<JavaScript.Dom.EventTarget>
+        |+> Static [
             Constructor O
             Constructor MediaStream
             |> WithComment "Composes a new stream out of existing tracks."
             Constructor (Type.ArrayOf MediaStream)
             |> WithComment "Composes a new stream out of existing tracks."
         ]
-        |+> Protocol [
+        |+> Instance [
             "id" =? T<string>
             |> WithComment "Globally unqiue identifier."
             "getAudioTracks" => O ^-> Type.ArrayOf MediaStreamTrack
