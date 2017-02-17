@@ -8,13 +8,11 @@ let bt =
         .WithFramework(fun fw -> fw.Net40)
 
 let main =
-    (bt.Zafir.Extension("WebSharper.WebRTC")
-    |> FSharpConfig.BaseDir.Custom "WebRTC")
+    bt.Zafir.Extension("WebSharper.WebRTC", directory = "WebRTC")
         .SourcesFromProject("WebRTC.fsproj")
 
 (*let test =
-    (bt.WebSharper.BundleWebsite("IntelliFactory.WebSharper.WebRTC.Tests")
-    |> FSharpConfig.BaseDir.Custom "Tests")
+    bt.WebSharper.BundleWebsite("IntelliFactory.WebSharper.WebRTC.Tests", directory = "Tests")
         .SourcesFromProject("Tests.fsproj")
         .References(fun r -> [r.Project main])*)
 
