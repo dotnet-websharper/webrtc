@@ -2,13 +2,13 @@
 open IntelliFactory.Build
 
 let bt =
-    BuildTool().PackageId("Zafir.WebRTC")
-        .VersionFrom("Zafir")
+    BuildTool().PackageId("WebSharper.WebRTC")
+        .VersionFrom("WebSharper")
         .WithFSharpVersion(FSharpVersion.FSharp30)
         .WithFramework(fun fw -> fw.Net40)
 
 let main =
-    bt.Zafir.Extension("WebSharper.WebRTC", directory = "WebRTC")
+    bt.WebSharper4.Extension("WebSharper.WebRTC", directory = "WebRTC")
         .SourcesFromProject("WebRTC.fsproj")
 
 (*let test =
@@ -23,7 +23,7 @@ bt.Solution [
     bt.NuGet.CreatePackage()
         .Configure(fun c ->
             { c with
-                Title = Some "Zafir.WebRTC"
+                Title = Some "WebSharper.WebRTC"
                 LicenseUrl = Some "http://websharper.com/licensing"
                 ProjectUrl = Some "https://bitbucket.org/intellifactory/websharper.webrtc"
                 Description = "WebSharper Extensions for WebRTC"
