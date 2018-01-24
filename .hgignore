@@ -1,6 +1,11 @@
 syntax: glob
-WebRTC/bin/*
-WebRTC/obj/*
-packages/*
+bin/
+obj/
+packages/
 *.suo
-build/*
+build/
+.fake/
+paket-files/
+nuget/*.paket.template
+.vs/
+.vscode/
