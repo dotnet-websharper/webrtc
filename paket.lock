@@ -200,7 +200,7 @@ NUGET
       FSharp.Core
     FAKE (4.64.4)
     FSharp.Compiler.Tools (4.1.29)
-    FSharp.Core (4.3)
+    FSharp.Core (4.3.2)
     Mono.Cecil (0.10.0-beta7)
     Newtonsoft.Json (10.0.3)
     Paket.Core (5.122.3)
@@ -209,8 +209,9 @@ NUGET
       FSharp.Core
       Mono.Cecil (>= 0.10.0-beta6)
       Newtonsoft.Json
-GITHUB
-  remote: intellifactory/websharper
-    tools/WebSharper.Fake.cmd (2fb1a8c77bd9ffea8a4a32c24fde8690b4725206)
-    tools/WebSharper.Fake.fsx (2fb1a8c77bd9ffea8a4a32c24fde8690b4725206)
-    tools/WebSharper.Fake.sh (2fb1a8c77bd9ffea8a4a32c24fde8690b4725206)
+
+GROUP wsbuild
+
+GIT
+  remote: https://github.com/dotnet-websharper/build-script
+     (0ffbf6a797788d426225eda88d461940cb95be1d)
