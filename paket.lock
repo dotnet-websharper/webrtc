@@ -1,9 +1,9 @@
 STORAGE: NONE
 NUGET
   remote: https://nuget.intellifactory.com/nuget
-    WebSharper (4.2.2.226-beta)
-    WebSharper.FSharp (4.2.2.226-beta)
-      WebSharper (4.2.2.226-beta)
+    WebSharper (4.2.2.231-beta)
+    WebSharper.FSharp (4.2.2.231-beta)
+      WebSharper (4.2.2.231-beta)
 
 GROUP build
 RESTRICTION: == net45
@@ -27,4 +27,4 @@ GROUP wsbuild
 
 GIT
   remote: https://github.com/dotnet-websharper/build-script
-     (b325ab20b6449f09d40bfe85b555cea362b228e9)
+     (3620ef58aabd2af5b1e7234cdb982d5381f10c57)
