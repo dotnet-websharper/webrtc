@@ -5,6 +5,5 @@ packages/
 build/
 .fake/
 paket-files/
-nuget/*.paket.template
 .vs/
 .vscode/

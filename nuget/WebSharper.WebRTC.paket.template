@@ -16,4 +16,4 @@ files
     ../WebSharper.WebRTC/bin/Release/netstandard2.0/WebSharper.WebRTC.dll ==> lib/netstandard2.0
     ../WebSharper.WebRTC/bin/Release/netstandard2.0/WebSharper.WebRTC.xml ==> lib/netstandard2.0
 dependencies
-        WebSharper ~> LOCKEDVERSION/3
+        WebSharper ~> LOCKEDVERSION:[3]
