@@ -1,16 +1,16 @@
-2023-10-27 09:55:17.9254|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.355-beta2\tools\net6.0\win-x64 (server side)
-2023-10-27 09:55:17.9526|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.355-beta2\tools\net6.0\win-x64 (server side)
-2023-10-27 09:55:17.9526|DEBUG|Program|Compiling D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\WebSharper.WebRTC.fsproj
-2023-10-27 09:55:17.9642|TRACE|Program|Server sends: e: WebSharper warning WS9002: Please use "binding" instead of "Extension" for your project type
-2023-10-27 09:55:22.7726|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(181,13,181,29): warning FS3520: XML comment is not placed on a valid language element.
-2023-10-27 09:55:22.7726|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(30,28,30,36): warning FS0044: This construct is deprecated. Use Class or Interface for the initial definitions
-2023-10-27 09:55:22.7726|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(174,23,174,31): warning FS0044: This construct is deprecated. Use Class or Interface for the initial definitions
-2023-10-27 09:55:22.7726|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(194,9,194,12): warning FS0044: This construct is deprecated
-2023-10-27 09:55:22.7726|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(231,9,231,12): warning FS0044: This construct is deprecated
-2023-10-27 09:55:22.7832|TRACE|Program|Server sends: n: F# compilation: 00:00:04.9207115
-2023-10-27 09:55:22.8905|TRACE|Program|Server sends: n: Loading IExtension implementation: 00:00:00.1127588
-2023-10-27 09:55:22.9501|TRACE|Program|Server sends: n: Getting Assembly definition: 00:00:00.0596144
-2023-10-27 09:55:23.4109|TRACE|Program|Server sends: n: Built assembly: 00:00:00.4607538
-2023-10-27 09:55:23.9663|TRACE|Program|Server sends: n: Creating WebSharper metadata: 00:00:00.5554240
-2023-10-27 09:55:24.1083|TRACE|Program|Server sends: n: Writing final dll: 00:00:00.1419706
-2023-10-27 09:55:24.1141|TRACE|Program|Server sends: x: 0
+2023-11-10 16:26:22.8930|DEBUG|Program|location of wsfscservice is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.364-beta3\tools\net6.0\win-x64 (server side)
+2023-11-10 16:26:22.9116|DEBUG|Program|pipename is: C:\Users\runneradmin\.nuget\packages\websharper.fsharp\7.0.3.364-beta3\tools\net6.0\win-x64 (server side)
+2023-11-10 16:26:22.9116|DEBUG|Program|Compiling D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\WebSharper.WebRTC.fsproj
+2023-11-10 16:26:22.9116|TRACE|Program|Server sends: e: WebSharper warning WS9002: Please use "binding" instead of "Extension" for your project type
+2023-11-10 16:26:26.2101|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(181,13,181,29): warning FS3520: XML comment is not placed on a valid language element.
+2023-11-10 16:26:26.2101|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(30,28,30,36): warning FS0044: This construct is deprecated. Use Class or Interface for the initial definitions
+2023-11-10 16:26:26.2101|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(174,23,174,31): warning FS0044: This construct is deprecated. Use Class or Interface for the initial definitions
+2023-11-10 16:26:26.2101|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(194,9,194,12): warning FS0044: This construct is deprecated
+2023-11-10 16:26:26.2101|TRACE|Program|Server sends: e: D:\a\build-script\build-script\webrtc\WebSharper.WebRTC\Main.fs(231,9,231,12): warning FS0044: This construct is deprecated
+2023-11-10 16:26:26.2101|TRACE|Program|Server sends: n: F# compilation: 00:00:03.3687207
+2023-11-10 16:26:26.2905|TRACE|Program|Server sends: n: Loading IExtension implementation: 00:00:00.0756306
+2023-11-10 16:26:26.3242|TRACE|Program|Server sends: n: Getting Assembly definition: 00:00:00.0337114
+2023-11-10 16:26:26.6253|TRACE|Program|Server sends: n: Built assembly: 00:00:00.3010881
+2023-11-10 16:26:26.9964|TRACE|Program|Server sends: n: Creating WebSharper metadata: 00:00:00.3711121
+2023-11-10 16:26:27.0959|TRACE|Program|Server sends: n: Writing final dll: 00:00:00.0994670
+2023-11-10 16:26:27.0999|TRACE|Program|Server sends: x: 0
