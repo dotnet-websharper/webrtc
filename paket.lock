@@ -8,11 +8,11 @@ NUGET
     System.Reflection.Emit.Lightweight (4.7)
       System.Reflection.Emit.ILGeneration (>= 4.7)
   remote: https://nuget.pkg.github.com/dotnet-websharper/index.json
-    WebSharper (7.0.6.459-beta5)
+    WebSharper (8.0.0.471-beta1)
       FSharp.Core (>= 6.0)
       System.Reflection.Emit.Lightweight (>= 4.7)
-    WebSharper.FSharp (7.0.6.459-beta5)
-      WebSharper (7.0.6.459-beta5)
+    WebSharper.FSharp (8.0.0.471-beta1)
+      WebSharper (8.0.0.471-beta1)
 
 GROUP wsbuild
 
