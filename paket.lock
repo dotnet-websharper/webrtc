@@ -4,9 +4,13 @@ RESTRICTION: == netstandard2.0
 NUGET
   remote: https://api.nuget.org/v3/index.json
     FSharp.Core (6.0)
+    HtmlAgilityPack (1.12.4)
     System.Reflection.Emit.ILGeneration (4.7)
     System.Reflection.Emit.Lightweight (4.7)
       System.Reflection.Emit.ILGeneration (>= 4.7)
+    WebSharper.UI (10.1.0.667)
+      HtmlAgilityPack (>= 1.12.4)
+      WebSharper (>= 10.1.0.667 < 10.1.1)
   remote: https://nuget.pkg.github.com/dotnet-websharper/index.json
     WebSharper (10.1.0.667)
       FSharp.Core (>= 6.0)

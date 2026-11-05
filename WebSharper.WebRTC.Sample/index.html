@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSharper.WebRTC — camera demo</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-titles">
+            <h1>WebSharper.WebRTC</h1>
+            <p>Camera capture with <code>getUserMedia</code> and <code>srcObject</code> — with <a href="https://websharper.com">WebSharper</a></p>
+        </div>
+        <a class="app-source" href="https://github.com/dotnet-websharper/webrtc">Source</a>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <header class="card-header">
+                <h2>Webcam preview</h2>
+                <p>Press <strong>Start camera</strong> to request camera access and render the stream.</p>
+            </header>
+            <div class="card-body">
+                <div class="actions">
+                    <button class="btn btn-primary" ws-onclick="StartBtn">Start camera</button>
+                    <button class="btn" ws-onclick="StopBtn">Stop</button>
+                </div>
+                <p class="error">${Error}</p>
+                <div class="video-frame">
+                    <video id="camera" autoplay playsinline muted></video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="Scripts/WebSharper.WebRTC.Sample.min.js"></script>
+</body>
+</html>

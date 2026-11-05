@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <WebSharperProject>Library</WebSharperProject>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>FS0864</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+    <None Include="wsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebSharper.WebRTC\WebSharper.WebRTC.fsproj" />
+  </ItemGroup>
+
+  <Import Project="..\.paket\Paket.Restore.targets" />
+
+</Project>

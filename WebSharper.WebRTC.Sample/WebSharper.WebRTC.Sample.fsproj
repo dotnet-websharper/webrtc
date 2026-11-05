@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <WebSharperSourceMap>false</WebSharperSourceMap>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Client.fs" />
+    <None Include="package.json" />
+    <None Include="esbuild.config.mjs" />
+    <None Include="wsconfig.json" />
+    <Content Include="index.html" />
+    <Content Include="css/index.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebSharper.WebRTC.Extensions\WebSharper.WebRTC.Extensions.fsproj" />
+    <ProjectReference Include="..\WebSharper.WebRTC\WebSharper.WebRTC.fsproj" />
+  </ItemGroup>
+
+  <Target Name="ESBuildBundle" AfterTargets="WebSharperCompile">
+    <Exec Command="npm install" />
+    <Exec Command="node ./esbuild.config.mjs" />
+  </Target>
+
+  <Target Name="CopyStatic" AfterTargets="Build">
+    <Copy SourceFiles="index.html" DestinationFolder="../dist" />
+    <Copy SourceFiles="css/index.css" DestinationFolder="../dist/css" />
+  </Target>
+
+  <Import Project="..\.paket\Paket.Restore.targets" />
+
+</Project>

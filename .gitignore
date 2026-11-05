@@ -8,3 +8,6 @@ paket-files/
 .vs/
 .vscode/
 websharper.log
+*/build/
+*/node_modules/
+dist/
