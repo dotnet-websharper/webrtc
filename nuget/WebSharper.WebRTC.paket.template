@@ -15,10 +15,8 @@ tags
     Web JavaScript F# C#
 files
     ../WebSharper.WebRTC/bin/Release/netstandard2.0/WebSharper.WebRTC.dll ==> lib/netstandard2.0
-    ../WebSharper.WebRTC/bin/Release/netstandard2.0/WebSharper.WebRTC.websharper ==> lib/netstandard2.0
     ../WebSharper.WebRTC/bin/Release/netstandard2.0/WebSharper.WebRTC.xml ==> lib/netstandard2.0
     ../WebSharper.WebRTC.Extensions/bin/Release/netstandard2.0/WebSharper.WebRTC.Extensions.dll ==> lib/netstandard2.0
-    ../WebSharper.WebRTC.Extensions/bin/Release/netstandard2.0/WebSharper.WebRTC.Extensions.websharper ==> lib/netstandard2.0
     ../WebSharper.WebRTC.Extensions/bin/Release/netstandard2.0/WebSharper.WebRTC.Extensions.xml ==> lib/netstandard2.0
 dependencies
         WebSharper ~> LOCKEDVERSION:[3]
