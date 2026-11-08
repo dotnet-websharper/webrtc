@@ -6,6 +6,7 @@
 #r "nuget: Fake.DotNet.AssemblyInfoFile"
 #r "nuget: Fake.DotNet.Paket"
 #r "nuget: Paket.Core, 12.0.0-alpha001"
+#r "nuget: MSBuild.StructuredLogger"
 
 open Fake.Core
 System.Environment.GetCommandLineArgs()
